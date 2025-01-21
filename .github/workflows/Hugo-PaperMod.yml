@@ -104,7 +104,7 @@ jobs:
           fi
 
           cat > config.toml << EOL
-          baseURL = "https://$domain"
+          baseURL = "https://moniqueejohnsonp82.github.io"
           languageCode = "zh-cn"
           title = "${{ github.repository_owner }}'s Space"
           theme = "PaperMod"
