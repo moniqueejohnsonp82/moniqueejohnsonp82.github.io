@@ -48,6 +48,9 @@ jobs:
         run: |
           mkdir -p themes
           git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+
+        # 创建 post 文件夹
+         mkdir -p content/post
           
           # 这里的重点：把所有 .md 文件都写为 type = "post"
           generate_front_matter() {
@@ -106,7 +109,7 @@ jobs:
           cat > config.toml << EOL
           baseURL = "https://$owner.github.io"
           languageCode = "zh-cn"
-          title = "${{ github.repository_owner }}'s Space"
+          title = "${{ github.repository_owner }}"
           theme = "PaperMod"
 
           [params]
@@ -132,11 +135,7 @@ jobs:
             tag = "tags"
 
           [menu]
-            main = [
-              {identifier = "archives", name = "Archives", url = "/archives/", weight = 10},
-              {identifier = "categories", name = "Categories", url = "/categories/", weight = 20},
-              {identifier = "search", name = "Search", url = "/search/", weight = 30},
-            ]
+            main = []
           EOL
 
           # 至少留个 content 目录
