@@ -49,9 +49,6 @@ jobs:
           mkdir -p themes
           git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 
-        # 创建 post 文件夹
-         mkdir -p content/post
-          
           # 这里的重点：把所有 .md 文件都写为 type = "post"
           generate_front_matter() {
             local file="$1"
