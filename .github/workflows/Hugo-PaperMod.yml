@@ -132,7 +132,9 @@ jobs:
             tag = "tags"
 
           [menu]
-            main = []
+            main = [
+            
+            ]
           EOL
 
           # 至少留个 content 目录
